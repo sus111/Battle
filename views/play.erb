@@ -1,9 +1,26 @@
-<%= @player_1_name %> vs. <%= @player_2_name %>
-<p>
+<link rel='stylesheet' type='text/css' href='style.css'/>
+
+  <body>
+<center>
+
+<h1>  <%= @player_1_name %> vs. <%= @player_2_name %> </h1>
+
+<player1sprite>
+ <iframe src="http://pldh.net/media/pokemon/gen5/back/059.png" width="50%" height="50%" frameBorder="0" allowFullScreen></iframe><a  </a>
+</player1sprite>
+
+<player1HP>
 <%= @player_1_name%>: 60HP
-</p>
+</player1HP>
 
 <form action="/attack">
+  <player1attack>
   <input type="submit" value="Attack">
+</player1attack>
 </form>
-<a href=""/attack">Attack</a>
+</center>
+</body>
+
+
+
+<a [href=""/attack"]{display: none} </a>
