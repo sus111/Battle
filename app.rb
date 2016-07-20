@@ -1,9 +1,17 @@
 require 'sinatra/base'
 
-class battle_mon < Sinatra::Base
+class BattleMon < Sinatra::Base
   get '/' do
-    'Hello battle_mon!'
+    erb :index
   end
+
+  post '/contestants' do
+    @contestant_1_name = params[:contestant_1_name]
+    @contestant_2_name = params[:contestant_2_name]
+    erb :play
+  end
+
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0
