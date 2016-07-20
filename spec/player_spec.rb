@@ -25,11 +25,4 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'damages the player' do
-      expect(susan).to receive(:receive_damage)
-      barry.attack(susan)
-    end
-  end
-
 end
