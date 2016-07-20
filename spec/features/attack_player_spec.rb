@@ -7,4 +7,6 @@ feature 'Attack Player' do
     click_button('Attack')
     expect(page).to have_content 'Sarah attacked Dave'
   end
+
+  
 end
