@@ -8,8 +8,8 @@ enable :sessions
   end
 
   post '/contestants' do
-    session[:contestant_1_name] = params[:contestant_1_name]
-    session[:contestant_2_name] = params[:contestant_2_name]
+    session[:contestant_1_name] = "Thady"
+    session[:contestant_2_name] = "Nick"
      redirect '/play'
   end
 
