@@ -1,26 +1,34 @@
+
 require 'sinatra/base'
 
 class BattleMon < Sinatra::Base
-enable :sessions
+ enable :sessions
 
-  get '/' do
-    erb :index
-  end
+ get '/' do
+   erb :index
+ end
 
-  post '/contestants' do
-    session[:contestant_1_name] = "Thady"
-    session[:contestant_2_name] = "Nick"
-     redirect '/play'
-  end
+ post '/names' do
+   session[:player_1_name] = params[:player_1_name]
+   session[:player_2_name] = params[:player_2_name]
+   redirect '/play'
+ end
 
-  get '/play' do
-    @contestant_1_name = session[:contestant_1_name]
-    @contestant_2_name = session[:contestant_2_name]
-    erb :play
-  end
+ get '/play' do
+   @player_1_name = session[:player_1_name]
+   @player_2_name = session[:player_2_name]
+   erb :play
+ end
+
+ get '/attack' do
+   @player_1_name = session[:player_1_name]
+   @player_2_name = session[:player_2_name]
+   erb :attack
+ end
 
 
 
-  # start the server if ruby file executed directly
-  run! if app_file == $0
+
+ # start the server if ruby file executed directly
+ run! if app_file == $0
 end

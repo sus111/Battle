@@ -1,9 +1,6 @@
-feature 'Enter contestants' do
+feature 'Enter players' do
   scenario 'submitting names' do
-    visit('/')
-    fill_in :contestant_1_name, with: "Thady"
-    fill_in :contestant_2_name, with: "Nick"
-    click_button "Submit"
+    sign_in_and_play
     expect(page).to have_content "Thady vs. Nick"
   end
 end
