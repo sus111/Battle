@@ -8,5 +8,5 @@ feature 'Reduce Hit Points' do
     click_button('OK')
     expect(page).to have_content 'Dave: 50 Hitpoints'
     expect(page).not_to have_content 'Dave: 60 Hitpoints'
-end
+  end
 end
