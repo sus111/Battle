@@ -1,3 +1,6 @@
+require 'spec_helper'
+require '../battle/app'
+
 feature 'attack' do
   scenario 'shows player has been attacked' do
     sign_in_and_play
