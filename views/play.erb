@@ -3,20 +3,23 @@
   <body>
 <center>
 
-<h1>  <%= @player_1_name %> vs. <%= @player_2_name %> </h1>
+<h1>  <%= @game.player_1.name %> vs. <%= @game.player_2.name %> </h1>
 
 <player1sprite>
  <iframe src="http://pldh.net/media/pokemon/gen5/back/059.png" width="50%" height="50%" frameBorder="0" allowFullScreen></iframe><a  </a>
 </player1sprite>
 
-<player1HP>
-<%= @player_2_name%>: <%=$player_2.hitpoints%>HP
-</player1HP>
+<!-- <player1HP> -->
+<%= @game.player_1.name%>: <%=@game.player_1.hitpoints%>HP
+<!-- </player1HP> -->
+<%= @game.player_2.name%>: <%=@game.player_2.hitpoints%>HP<br>
+<%= @game.player_1_turn ? @game.player_1.name : @game.player_2.name %>'s turn
+
 
 <form action="/attack">
-  <player1attack>
+  <!-- <player1attack> -->
   <input type="submit" value="Attack">
-</player1attack>
+<!-- </player1attack> -->
 </form>
 </center>
 </body>

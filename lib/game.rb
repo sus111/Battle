@@ -1,14 +1,20 @@
 class Game
 
-attr_reader :player_1, :player_2
+attr_reader :player_1, :player_2, :player_1_turn
 
   def initialize(player_1, player_2)
     @player_1 = player_1
     @player_2 = player_2
+    @player_1_turn = true
   end
 
-  def attack(player)
-    player.reduce_points
+  def attack#(player)
+    # player.reduce_points
+    @player_1_turn ? @player_2.reduce_points : @player_1.reduce_points
+  end
+
+  def switch_turns
+    @player_1_turn ^= true
   end
 
 end
