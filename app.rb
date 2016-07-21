@@ -27,6 +27,11 @@ class BattleMon < Sinatra::Base
    @game.attack#(2player_1)
    @game.switch_turns
    erb :attack
+   erb :end if @game.player_dead?
+ end
+
+ get '/end' do
+   erb :end
  end
 
 
