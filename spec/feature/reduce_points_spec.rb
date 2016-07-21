@@ -1,5 +1,5 @@
 require 'spec_helper'
-require '../battle/app'
+#require '../battle/app'
 
 feature 'reduce_points' do
   scenario 'player two\'s hitpoints are reduced by 10' do

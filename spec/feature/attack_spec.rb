@@ -1,5 +1,5 @@
 require 'spec_helper'
-require '../battle/app'
+#require '../battle/app'
 
 feature 'attack' do
   scenario 'shows player has been attacked' do

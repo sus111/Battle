@@ -1,5 +1,5 @@
-require 'spec_helper'
-require '../battle/app'
+#require 'spec_helper'
+#require '../battle/app'
 
 feature 'HP' do
   scenario 'shows hit points' do
