@@ -24,10 +24,13 @@ class BattleMon < Sinatra::Base
 
  get '/attack' do
    @game = $game
-   @game.attack#(2player_1)
+   if @game.end_game
+     redirect '/end'
+   else
+   @game.attack
    @game.switch_turns
    erb :attack
-   erb :end if @game.player_dead?
+ end
  end
 
  get '/end' do

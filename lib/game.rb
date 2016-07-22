@@ -1,14 +1,15 @@
 class Game
 
-attr_reader :player_1, :player_2, :player_1_turn
+attr_reader :player_1, :player_2, :player_1_turn, :game_over
 
   def initialize(player_1, player_2)
     @player_1 = player_1
     @player_2 = player_2
     @player_1_turn = true
+    #@game_over = false
   end
 
-  def attack#(player)
+  def attack
     @player_1_turn ? @player_2.reduce_points : @player_1.reduce_points
   end
 
@@ -16,8 +17,8 @@ attr_reader :player_1, :player_2, :player_1_turn
     @player_1_turn ^= true
   end
 
-  def player_dead?
-    @player_1.dead || @player_2.dead
+  def end_game
+    @player_1.player_dead? || @player_2.player_dead?
   end
 
 end
